@@ -1,0 +1,8 @@
+{
+	"myDict": {
+		"myInt": 123,
+		"myFloat": 123.45,
+		"myBool": true,
+		"myStr": "abc",
+	}
+}

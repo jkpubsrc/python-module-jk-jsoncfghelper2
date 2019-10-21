@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<STRUCTURES>
+
+	<!--	################################################################	-->
+
+	<main>
+		<STRUCTURE>
+			<myFloat			dataType="float"		minValue="123.45"	/>
+		</STRUCTURE>
+	</main>
+
+	<!--	################################################################	-->
+
+</STRUCTURES>

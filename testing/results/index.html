@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="utf-8"/>
+	<link href="styles.css" rel="stylesheet"/>
+	<script src="jquery-3.3.1.min.js"></script>
+	<link href="jquery-ui-1.12.1.min.css" rel="stylesheet"/>
+	<script src="jquery-ui-1.12.1.min.js"></script>
+	<script>
+		$( function() {
+			$( "#tabs" ).tabs();
+		} );
+	</script>
+</head>
+<body>
+
+	<div style="display: flex; flex-direction: row;">
+
+		<div style="flex: 33%; margin-right: 10px;">
+
+			<table style="margin-bottom: 10px" class="summary">
+				<tr>
+					<td>Tests performed:</td>
+					<td>20</td>
+					<td rowspan="4"></td>
+					<td>Sum of all test durations:</td>
+					<td>0.000 s</td>
+				</tr>
+				<tr>
+					<td>Tests succeeded:</td>
+					<td>20</td>
+					<td>Total runtime of all tests:</td>
+					<td>0.001 s</td>
+				</tr>
+				<tr>
+					<td>Tests failed:</td>
+					
+					<td>0</td>
+					
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Tests not performed:</td>
+					
+					<td>0</td>
+					
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+		
+			<div id="tabs">
+				<ul>
+					<li><a href="#tabs-1">Graph</a></li>
+					<li><a href="#tabs-2">Table</a></li>
+				</ul>
+				<div id="tabs-1" style="margin-bottom: 20px"><svg width="322pt" height="1070pt"
+ viewBox="0.00 0.00 321.58 1070.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 1066)">
+<title>%3</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-1066 317.58,-1066 317.58,4 -4,4"/>
+<!-- 0 -->
+<g id="node1" class="node"><title>0</title>
+<ellipse fill="#f0f0ff" stroke="#d0d0f0" cx="27" cy="-531" rx="27" ry="18"/>
+</g>
+<!-- 1 -->
+<g id="node2" class="node"><title>1</title>
+<ellipse fill="#008000" stroke="#ffffff" cx="201.79" cy="-1044" rx="65.7887" ry="18"/>
+<text text-anchor="middle" x="201.79" y="-1040.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">simple&#45;int&#45;3&#45;str</text>
+</g>
+<!-- 0&#45;&gt;1 -->
+<g id="edge1" class="edge"><title>0&#45;&gt;1</title>
+<path fill="none" stroke="black" d="M27.6815,-549.083C26.6605,-628.57 26.6601,-946.126 90,-1017 99.7004,-1027.85 112.969,-1034.7 126.955,-1038.95"/>
+<polygon fill="black" stroke="black" points="126.158,-1042.36 136.717,-1041.49 127.921,-1035.58 126.158,-1042.36"/>
+</g>
+<!-- 2 -->
+<g id="node3" class="node"><title>2</title>
+<ellipse fill="#008000" stroke="#ffffff" cx="201.79" cy="-990" rx="72.5877" ry="18"/>
+<text text-anchor="middle" x="201.79" y="-986.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">simple&#45;str&#45;3&#45;float</text>
+</g>
+<!-- 0&#45;&gt;2 -->
+<g id="edge2" class="edge"><title>0&#45;&gt;2</title>
+<path fill="none" stroke="black" d="M28.0013,-549.038C28.382,-622.846 33.595,-900.871 90,-963 98.4003,-972.253 109.394,-978.584 121.192,-982.872"/>
+<polygon fill="black" stroke="black" points="120.202,-986.23 130.791,-985.89 122.301,-979.552 120.202,-986.23"/>
+</g>
+<!-- 3 -->
+<g id="node4" class="node"><title>3</title>
+<ellipse fill="#008000" stroke="#ffffff" cx="201.79" cy="-936" rx="79.0865" ry="18"/>
+<text text-anchor="middle" x="201.79" y="-932.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">simple&#45;float&#45;4&#45;bool</text>
+</g>
+<!-- 0&#45;&gt;3 -->
+<g id="edge3" class="edge"><title>0&#45;&gt;3</title>
+<path fill="none" stroke="black" d="M28.4099,-549.058C30.3224,-616.927 40.5147,-855.578 90,-909 97.4162,-917.006 106.776,-922.816 116.898,-927.005"/>
+<polygon fill="black" stroke="black" points="115.779,-930.322 126.374,-930.412 118.148,-923.735 115.779,-930.322"/>
+</g>
+<!-- 4 -->
+<g id="node5" class="node"><title>4</title>
+<ellipse fill="#008000" stroke="#ffffff" cx="201.79" cy="-882" rx="66.0889" ry="18"/>
+<text text-anchor="middle" x="201.79" y="-878.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">simple&#45;int&#45;1&#45;int</text>
+</g>
+<!-- 0&#45;&gt;4 -->
+<g id="edge4" class="edge"><title>0&#45;&gt;4</title>
+<path fill="none" stroke="black" d="M28.9457,-548.976C32.5395,-610.335 47.3702,-810.185 90,-855 99.772,-865.273 112.747,-871.911 126.369,-876.144"/>
+<polygon fill="black" stroke="black" points="125.8,-879.615 136.365,-878.819 127.609,-872.853 125.8,-879.615"/>
+</g>
+<!-- 5 -->
+<g id="node6" class="node"><title>5</title>
+<ellipse fill="#008000" stroke="#ffffff" cx="201.79" cy="-828" rx="103.182" ry="18"/>
+<text text-anchor="middle" x="201.79" y="-824.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">constraint&#45;int&#45;1&#45;minimum</text>
+</g>
+<!-- 0&#45;&gt;5 -->
+<g id="edge5" class="edge"><title>0&#45;&gt;5</title>
+<path fill="none" stroke="black" d="M29.6916,-548.97C35.172,-603.362 54.1922,-764.712 90,-801 94.9049,-805.971 100.561,-810.084 106.669,-813.482"/>
+<polygon fill="black" stroke="black" points="105.382,-816.748 115.906,-817.966 108.438,-810.45 105.382,-816.748"/>
+</g>
+<!-- 6 -->
+<g id="node7" class="node"><title>6</title>
+<ellipse fill="#008000" stroke="#ffffff" cx="201.79" cy="-774" rx="65.7887" ry="18"/>
+<text text-anchor="middle" x="201.79" y="-770.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">simple&#45;str&#45;2&#45;int</text>
+</g>
+<!-- 0&#45;&gt;6 -->
+<g id="edge6" class="edge"><title>0&#45;&gt;6</title>
+<path fill="none" stroke="black" d="M27.5235,-549.105C27.4752,-590.503 33.4388,-692.683 90,-747 100.284,-756.876 113.55,-763.332 127.306,-767.511"/>
+<polygon fill="black" stroke="black" points="126.812,-771 137.374,-770.167 128.598,-764.232 126.812,-771"/>
+</g>
+<!-- 7 -->
+<g id="node8" class="node"><title>7</title>
+<ellipse fill="#008000" stroke="#ffffff" cx="201.79" cy="-720" rx="110.48" ry="18"/>
+<text text-anchor="middle" x="201.79" y="-716.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">constraint&#45;float&#45;2&#45;minimum</text>
+</g>
+<!-- 0&#45;&gt;7 -->
+<g id="edge7" class="edge"><title>0&#45;&gt;7</title>
+<path fill="none" stroke="black" d="M29.5525,-549.146C33.4317,-582.765 46.6134,-654.781 90,-693 95.0903,-697.484 100.803,-701.251 106.88,-704.414"/>
+<polygon fill="black" stroke="black" points="105.468,-707.617 116.014,-708.627 108.399,-701.26 105.468,-707.617"/>
+</g>
+<!-- 8 -->
+<g id="node9" class="node"><title>8</title>
+<ellipse fill="#008000" stroke="#ffffff" cx="201.79" cy="-666" rx="104.782" ry="18"/>
+<text text-anchor="middle" x="201.79" y="-662.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">constraint&#45;int&#45;4&#45;maximum</text>
+</g>
+<!-- 0&#45;&gt;8 -->
+<g id="edge8" class="edge"><title>0&#45;&gt;8</title>
+<path fill="none" stroke="black" d="M33.191,-548.531C41.2767,-572.7 59.2328,-615.884 90,-639 96.2878,-643.724 103.292,-647.632 110.639,-650.864"/>
+<polygon fill="black" stroke="black" points="109.514,-654.183 120.1,-654.606 112.089,-647.674 109.514,-654.183"/>
+</g>
+<!-- 9 -->
+<g id="node10" class="node"><title>9</title>
+<ellipse fill="#008000" stroke="#ffffff" cx="201.79" cy="-612" rx="104.782" ry="18"/>
+<text text-anchor="middle" x="201.79" y="-608.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">constraint&#45;int&#45;3&#45;maximum</text>
+</g>
+<!-- 0&#45;&gt;9 -->
+<g id="edge9" class="edge"><title>0&#45;&gt;9</title>
+<path fill="none" stroke="black" d="M41.7769,-546.537C53.4491,-558.755 71.2401,-575.286 90,-585 98.6363,-589.472 108.038,-593.222 117.593,-596.362"/>
+<polygon fill="black" stroke="black" points="116.589,-599.715 127.176,-599.303 118.643,-593.023 116.589,-599.715"/>
+</g>
+<!-- 10 -->
+<g id="node11" class="node"><title>10</title>
+<ellipse fill="#008000" stroke="#ffffff" cx="201.79" cy="-558" rx="79.8859" ry="18"/>
+<text text-anchor="middle" x="201.79" y="-554.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">simple&#45;float&#45;1&#45;float</text>
+</g>
+<!-- 0&#45;&gt;10 -->
+<g id="edge10" class="edge"><title>0&#45;&gt;10</title>
+<path fill="none" stroke="black" d="M53.4958,-534.984C72.557,-537.962 99.6651,-542.198 125.44,-546.226"/>
+<polygon fill="black" stroke="black" points="125.191,-549.729 135.612,-547.815 126.272,-542.813 125.191,-549.729"/>
+</g>
+<!-- 11 -->
+<g id="node12" class="node"><title>11</title>
+<ellipse fill="#008000" stroke="#ffffff" cx="201.79" cy="-504" rx="110.48" ry="18"/>
+<text text-anchor="middle" x="201.79" y="-500.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">constraint&#45;float&#45;1&#45;minimum</text>
+</g>
+<!-- 0&#45;&gt;11 -->
+<g id="edge11" class="edge"><title>0&#45;&gt;11</title>
+<path fill="none" stroke="black" d="M53.4958,-527.016C69.0557,-524.585 89.9778,-521.315 111.16,-518.006"/>
+<polygon fill="black" stroke="black" points="111.883,-521.435 121.223,-516.433 110.802,-514.519 111.883,-521.435"/>
+</g>
+<!-- 12 -->
+<g id="node13" class="node"><title>12</title>
+<ellipse fill="#008000" stroke="#ffffff" cx="201.79" cy="-450" rx="72.5877" ry="18"/>
+<text text-anchor="middle" x="201.79" y="-446.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">simple&#45;int&#45;4&#45;bool</text>
+</g>
+<!-- 0&#45;&gt;12 -->
+<g id="edge12" class="edge"><title>0&#45;&gt;12</title>
+<path fill="none" stroke="black" d="M41.7769,-515.463C53.4491,-503.245 71.2401,-486.714 90,-477 102.308,-470.627 116.169,-465.72 129.814,-461.955"/>
+<polygon fill="black" stroke="black" points="130.877,-465.296 139.686,-459.41 129.129,-458.517 130.877,-465.296"/>
+</g>
+<!-- 13 -->
+<g id="node14" class="node"><title>13</title>
+<ellipse fill="#008000" stroke="#ffffff" cx="201.79" cy="-396" rx="111.581" ry="18"/>
+<text text-anchor="middle" x="201.79" y="-392.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">constraint&#45;float&#45;3&#45;maximum</text>
+</g>
+<!-- 0&#45;&gt;13 -->
+<g id="edge13" class="edge"><title>0&#45;&gt;13</title>
+<path fill="none" stroke="black" d="M33.191,-513.469C41.2767,-489.3 59.2328,-446.116 90,-423 95.8216,-418.626 102.257,-414.952 109.011,-411.866"/>
+<polygon fill="black" stroke="black" points="110.469,-415.051 118.389,-408.013 107.809,-408.576 110.469,-415.051"/>
+</g>
+<!-- 14 -->
+<g id="node15" class="node"><title>14</title>
+<ellipse fill="#008000" stroke="#ffffff" cx="201.79" cy="-342" rx="103.182" ry="18"/>
+<text text-anchor="middle" x="201.79" y="-338.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">constraint&#45;int&#45;2&#45;minimum</text>
+</g>
+<!-- 0&#45;&gt;14 -->
+<g id="edge14" class="edge"><title>0&#45;&gt;14</title>
+<path fill="none" stroke="black" d="M29.5525,-512.854C33.4317,-479.235 46.6134,-407.219 90,-369 95.5662,-364.097 101.876,-360.05 108.593,-356.715"/>
+<polygon fill="black" stroke="black" points="110.226,-359.821 117.974,-352.594 107.411,-353.412 110.226,-359.821"/>
+</g>
+<!-- 15 -->
+<g id="node16" class="node"><title>15</title>
+<ellipse fill="#008000" stroke="#ffffff" cx="201.79" cy="-288" rx="72.2875" ry="18"/>
+<text text-anchor="middle" x="201.79" y="-284.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">simple&#45;str&#45;4&#45;bool</text>
+</g>
+<!-- 0&#45;&gt;15 -->
+<g id="edge15" class="edge"><title>0&#45;&gt;15</title>
+<path fill="none" stroke="black" d="M27.5235,-512.895C27.4752,-471.497 33.4388,-369.317 90,-315 99.1265,-306.236 110.602,-300.165 122.684,-295.988"/>
+<polygon fill="black" stroke="black" points="123.911,-299.274 132.47,-293.03 121.885,-292.573 123.911,-299.274"/>
+</g>
+<!-- 16 -->
+<g id="node17" class="node"><title>16</title>
+<ellipse fill="#008000" stroke="#ffffff" cx="201.79" cy="-234" rx="72.5877" ry="18"/>
+<text text-anchor="middle" x="201.79" y="-230.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">simple&#45;float&#45;3&#45;str</text>
+</g>
+<!-- 0&#45;&gt;16 -->
+<g id="edge16" class="edge"><title>0&#45;&gt;16</title>
+<path fill="none" stroke="black" d="M29.6916,-513.03C35.172,-458.638 54.1922,-297.288 90,-261 98.7777,-252.105 109.963,-245.954 121.835,-241.736"/>
+<polygon fill="black" stroke="black" points="122.953,-245.054 131.47,-238.752 120.882,-238.367 122.953,-245.054"/>
+</g>
+<!-- 17 -->
+<g id="node18" class="node"><title>17</title>
+<ellipse fill="#008000" stroke="#ffffff" cx="201.79" cy="-180" rx="111.581" ry="18"/>
+<text text-anchor="middle" x="201.79" y="-176.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">constraint&#45;float&#45;4&#45;maximum</text>
+</g>
+<!-- 0&#45;&gt;17 -->
+<g id="edge17" class="edge"><title>0&#45;&gt;17</title>
+<path fill="none" stroke="black" d="M28.9457,-513.024C32.5395,-451.665 47.3702,-251.815 90,-207 94.152,-202.635 98.8824,-198.926 103.995,-195.78"/>
+<polygon fill="black" stroke="black" points="105.762,-198.804 112.925,-190.997 102.457,-192.633 105.762,-198.804"/>
+</g>
+<!-- 18 -->
+<g id="node19" class="node"><title>18</title>
+<ellipse fill="#008000" stroke="#ffffff" cx="201.79" cy="-126" rx="65.7887" ry="18"/>
+<text text-anchor="middle" x="201.79" y="-122.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">simple&#45;str&#45;1&#45;str</text>
+</g>
+<!-- 0&#45;&gt;18 -->
+<g id="edge18" class="edge"><title>0&#45;&gt;18</title>
+<path fill="none" stroke="black" d="M28.4099,-512.942C30.3224,-445.073 40.5147,-206.422 90,-153 99.8379,-142.38 113.095,-135.623 127.016,-131.391"/>
+<polygon fill="black" stroke="black" points="127.939,-134.767 136.725,-128.847 126.164,-127.995 127.939,-134.767"/>
+</g>
+<!-- 19 -->
+<g id="node20" class="node"><title>19</title>
+<ellipse fill="#008000" stroke="#ffffff" cx="201.79" cy="-72" rx="73.387" ry="18"/>
+<text text-anchor="middle" x="201.79" y="-68.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">simple&#45;int&#45;2&#45;float</text>
+</g>
+<!-- 0&#45;&gt;19 -->
+<g id="edge19" class="edge"><title>0&#45;&gt;19</title>
+<path fill="none" stroke="black" d="M28.0013,-512.962C28.382,-439.154 33.595,-161.129 90,-99 98.2131,-89.9534 108.906,-83.6996 120.405,-79.4177"/>
+<polygon fill="black" stroke="black" points="121.766,-82.6567 130.217,-76.2667 119.625,-75.9919 121.766,-82.6567"/>
+</g>
+<!-- 20 -->
+<g id="node21" class="node"><title>20</title>
+<ellipse fill="#008000" stroke="#ffffff" cx="201.79" cy="-18" rx="73.387" ry="18"/>
+<text text-anchor="middle" x="201.79" y="-14.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">simple&#45;float&#45;2&#45;int</text>
+</g>
+<!-- 0&#45;&gt;20 -->
+<g id="edge20" class="edge"><title>0&#45;&gt;20</title>
+<path fill="none" stroke="black" d="M27.6815,-512.917C26.6605,-433.43 26.6601,-115.874 90,-45 98.1421,-35.8894 108.798,-29.6024 120.282,-25.3071"/>
+<polygon fill="black" stroke="black" points="121.641,-28.5465 130.086,-22.1491 119.495,-21.8836 121.641,-28.5465"/>
+</g>
+</g>
+</svg>
+</div>
+				<div id="tabs-2">
+					<table class="overview">
+						<tr class="heading">
+							<th class="testCaseMarker">▶</th>
+							<th class="testCaseName">Test case</th>
+							<th class="testCaseEnabled">Enabled</th>
+							<th class="testCaseResult">Result</th>
+							<th class="testCaseDuration">Duration</th>
+							<th class="testCaseDescription">Description</th>
+							<th class="testCaseMarker">◀</th>
+						</tr>
+						
+						<tr class="tablerow test_succeeded" id="test_simple-int-3-str">
+							<td id="mark1"></th>
+							<td class="testCaseName">simple-int-3-str</td>
+							<td class="testCaseEnabled">by user</td>
+							<td class="testCaseResult">succeeded</td>
+							<td class="testCaseDuration">0.031 ms</td>
+							<td class="testCaseDescription"></td>
+							<td id="mark2"></th>
+						</tr>
+						
+						<tr class="tablerow test_succeeded" id="test_simple-str-3-float">
+							<td id="mark1"></th>
+							<td class="testCaseName">simple-str-3-float</td>
+							<td class="testCaseEnabled">by user</td>
+							<td class="testCaseResult">succeeded</td>
+							<td class="testCaseDuration">0.022 ms</td>
+							<td class="testCaseDescription"></td>
+							<td id="mark2"></th>
+						</tr>
+						
+						<tr class="tablerow test_succeeded" id="test_simple-float-4-bool">
+							<td id="mark1"></th>
+							<td class="testCaseName">simple-float-4-bool</td>
+							<td class="testCaseEnabled">by user</td>
+							<td class="testCaseResult">succeeded</td>
+							<td class="testCaseDuration">0.017 ms</td>
+							<td class="testCaseDescription"></td>
+							<td id="mark2"></th>
+						</tr>
+						
+						<tr class="tablerow test_succeeded" id="test_simple-int-1-int">
+							<td id="mark1"></th>
+							<td class="testCaseName">simple-int-1-int</td>
+							<td class="testCaseEnabled">by user</td>
+							<td class="testCaseResult">succeeded</td>
+							<td class="testCaseDuration">0.011 ms</td>
+							<td class="testCaseDescription"></td>
+							<td id="mark2"></th>
+						</tr>
+						
+						<tr class="tablerow test_succeeded" id="test_constraint-int-1-minimum">
+							<td id="mark1"></th>
+							<td class="testCaseName">constraint-int-1-minimum</td>
+							<td class="testCaseEnabled">by user</td>
+							<td class="testCaseResult">succeeded</td>
+							<td class="testCaseDuration">0.009 ms</td>
+							<td class="testCaseDescription"></td>
+							<td id="mark2"></th>
+						</tr>
+						
+						<tr class="tablerow test_succeeded" id="test_simple-str-2-int">
+							<td id="mark1"></th>
+							<td class="testCaseName">simple-str-2-int</td>
+							<td class="testCaseEnabled">by user</td>
+							<td class="testCaseResult">succeeded</td>
+							<td class="testCaseDuration">0.010 ms</td>
+							<td class="testCaseDescription"></td>
+							<td id="mark2"></th>
+						</tr>
+						
+						<tr class="tablerow test_succeeded" id="test_constraint-float-2-minimum">
+							<td id="mark1"></th>
+							<td class="testCaseName">constraint-float-2-minimum</td>
+							<td class="testCaseEnabled">by user</td>
+							<td class="testCaseResult">succeeded</td>
+							<td class="testCaseDuration">0.016 ms</td>
+							<td class="testCaseDescription"></td>
+							<td id="mark2"></th>
+						</tr>
+						
+						<tr class="tablerow test_succeeded" id="test_constraint-int-4-maximum">
+							<td id="mark1"></th>
+							<td class="testCaseName">constraint-int-4-maximum</td>
+							<td class="testCaseEnabled">by user</td>
+							<td class="testCaseResult">succeeded</td>
+							<td class="testCaseDuration">0.012 ms</td>
+							<td class="testCaseDescription"></td>
+							<td id="mark2"></th>
+						</tr>
+						
+						<tr class="tablerow test_succeeded" id="test_constraint-int-3-maximum">
+							<td id="mark1"></th>
+							<td class="testCaseName">constraint-int-3-maximum</td>
+							<td class="testCaseEnabled">by user</td>
+							<td class="testCaseResult">succeeded</td>
+							<td class="testCaseDuration">0.008 ms</td>
+							<td class="testCaseDescription"></td>
+							<td id="mark2"></th>
+						</tr>
+						
+						<tr class="tablerow test_succeeded" id="test_simple-float-1-float">
+							<td id="mark1"></th>
+							<td class="testCaseName">simple-float-1-float</td>
+							<td class="testCaseEnabled">by user</td>
+							<td class="testCaseResult">succeeded</td>
+							<td class="testCaseDuration">0.009 ms</td>
+							<td class="testCaseDescription"></td>
+							<td id="mark2"></th>
+						</tr>
+						
+						<tr class="tablerow test_succeeded" id="test_constraint-float-1-minimum">
+							<td id="mark1"></th>
+							<td class="testCaseName">constraint-float-1-minimum</td>
+							<td class="testCaseEnabled">by user</td>
+							<td class="testCaseResult">succeeded</td>
+							<td class="testCaseDuration">0.007 ms</td>
+							<td class="testCaseDescription"></td>
+							<td id="mark2"></th>
+						</tr>
+						
+						<tr class="tablerow test_succeeded" id="test_simple-int-4-bool">
+							<td id="mark1"></th>
+							<td class="testCaseName">simple-int-4-bool</td>
+							<td class="testCaseEnabled">by user</td>
+							<td class="testCaseResult">succeeded</td>
+							<td class="testCaseDuration">0.010 ms</td>
+							<td class="testCaseDescription"></td>
+							<td id="mark2"></th>
+						</tr>
+						
+						<tr class="tablerow test_succeeded" id="test_constraint-float-3-maximum">
+							<td id="mark1"></th>
+							<td class="testCaseName">constraint-float-3-maximum</td>
+							<td class="testCaseEnabled">by user</td>
+							<td class="testCaseResult">succeeded</td>
+							<td class="testCaseDuration">0.008 ms</td>
+							<td class="testCaseDescription"></td>
+							<td id="mark2"></th>
+						</tr>
+						
+						<tr class="tablerow test_succeeded" id="test_constraint-int-2-minimum">
+							<td id="mark1"></th>
+							<td class="testCaseName">constraint-int-2-minimum</td>
+							<td class="testCaseEnabled">by user</td>
+							<td class="testCaseResult">succeeded</td>
+							<td class="testCaseDuration">0.010 ms</td>
+							<td class="testCaseDescription"></td>
+							<td id="mark2"></th>
+						</tr>
+						
+						<tr class="tablerow test_succeeded" id="test_simple-str-4-bool">
+							<td id="mark1"></th>
+							<td class="testCaseName">simple-str-4-bool</td>
+							<td class="testCaseEnabled">by user</td>
+							<td class="testCaseResult">succeeded</td>
+							<td class="testCaseDuration">0.010 ms</td>
+							<td class="testCaseDescription"></td>
+							<td id="mark2"></th>
+						</tr>
+						
+						<tr class="tablerow test_succeeded" id="test_simple-float-3-str">
+							<td id="mark1"></th>
+							<td class="testCaseName">simple-float-3-str</td>
+							<td class="testCaseEnabled">by user</td>
+							<td class="testCaseResult">succeeded</td>
+							<td class="testCaseDuration">0.009 ms</td>
+							<td class="testCaseDescription"></td>
+							<td id="mark2"></th>
+						</tr>
+						
+						<tr class="tablerow test_succeeded" id="test_constraint-float-4-maximum">
+							<td id="mark1"></th>
+							<td class="testCaseName">constraint-float-4-maximum</td>
+							<td class="testCaseEnabled">by user</td>
+							<td class="testCaseResult">succeeded</td>
+							<td class="testCaseDuration">0.013 ms</td>
+							<td class="testCaseDescription"></td>
+							<td id="mark2"></th>
+						</tr>
+						
+						<tr class="tablerow test_succeeded" id="test_simple-str-1-str">
+							<td id="mark1"></th>
+							<td class="testCaseName">simple-str-1-str</td>
+							<td class="testCaseEnabled">by user</td>
+							<td class="testCaseResult">succeeded</td>
+							<td class="testCaseDuration">0.008 ms</td>
+							<td class="testCaseDescription"></td>
+							<td id="mark2"></th>
+						</tr>
+						
+						<tr class="tablerow test_succeeded" id="test_simple-int-2-float">
+							<td id="mark1"></th>
+							<td class="testCaseName">simple-int-2-float</td>
+							<td class="testCaseEnabled">by user</td>
+							<td class="testCaseResult">succeeded</td>
+							<td class="testCaseDuration">0.009 ms</td>
+							<td class="testCaseDescription"></td>
+							<td id="mark2"></th>
+						</tr>
+						
+						<tr class="tablerow test_succeeded" id="test_simple-float-2-int">
+							<td id="mark1"></th>
+							<td class="testCaseName">simple-float-2-int</td>
+							<td class="testCaseEnabled">by user</td>
+							<td class="testCaseResult">succeeded</td>
+							<td class="testCaseDuration">0.008 ms</td>
+							<td class="testCaseDescription"></td>
+							<td id="mark2"></th>
+						</tr>
+						
+					</table>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div style="flex: 67%;" id="testcasediv"></div>
+
+	</div>
+
+	<script>
+		var currentMarkedRow = null
+		var currentMark1 = null;
+		var currentMark2 = null;
+
+		function displayTestCase() {
+			$("#testcasediv").load(testCaseEntryID + ".html");
+
+			if (currentMarkedRow != null) {
+				currentMark1.text("");
+				currentMark2.text("");
+				currentMarkedRow.removeClass("marked")
+			}
+			currentMarkedRow = $(this)
+			currentMarkedRow.addClass("marked")
+			currentMark1 = $(this).find("#mark1")
+			currentMark1.text("▶");
+			currentMark2 = $(this).find("#mark2")
+			currentMark2.text("◀");
+		}
+
+		$(document).ready(function() {
+
+			$("tr").click(function() {
+				testCaseEntryID = $(this).attr("id");
+				if ((testCaseEntryID == null) || (testCaseEntryID.length == 0))
+					return;
+
+				displayTestCase(testCaseEntryID)
+			});
+
+			$("g.node").on("click", function() {
+				testCaseEntryID = "test_" + $(this).find("text").html()
+
+				displayTestCase(testCaseEntryID)
+				// alert($(this).html());
+			});
+
+		})
+	</script>
+
+</body>
+</html>

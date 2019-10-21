@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<STRUCTURES>
+
+	<!--	################################################################	-->
+
+	<main>
+		<STRUCTURE>
+			<myList			dataType="list"		elementTypes="int,str"	/>
+		</STRUCTURE>
+	</main>
+
+	<!--	################################################################	-->
+
+</STRUCTURES>

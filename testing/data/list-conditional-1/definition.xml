@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<STRUCTURES>
+
+	<!--	################################################################	-->
+
+	<other-1>
+		<STRUCTURE>
+			<id				dataType="int"	/>
+			<myBool			dataType="bool"	/>
+		</STRUCTURE>
+		<CONDITION>
+			<eq field="id">123</eq>
+		</CONDITION>
+	</other-1>
+
+	<!--	################################################################	-->
+
+	<other-2>
+		<STRUCTURE>
+			<id				dataType="int"	/>
+			<myStr			dataType="str"	/>
+		</STRUCTURE>
+		<CONDITION>
+			<eq field="id">456</eq>
+		</CONDITION>
+	</other-2>
+
+	<!--	################################################################	-->
+
+	<main>
+		<STRUCTURE>
+			<myList			dataType="list"		elementTypes="other-1,other-2"	/>
+		</STRUCTURE>
+	</main>
+
+	<!--	################################################################	-->
+
+</STRUCTURES>

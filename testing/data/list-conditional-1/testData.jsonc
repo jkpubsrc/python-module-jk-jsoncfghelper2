@@ -1,0 +1,20 @@
+{
+	"myList": [
+		{
+			"id": 123,
+			"myBool": true,
+		},
+		{
+			"id": 456,
+			"myStr": "abc",
+		},
+		{
+			"id": 123,
+			"myBool": false,
+		},
+		{
+			"id": 456,
+			"myStr": "def",
+		},
+	]
+}

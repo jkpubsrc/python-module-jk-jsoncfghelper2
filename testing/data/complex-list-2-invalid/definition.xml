@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<STRUCTURES>
+
+	<!--	################################################################	-->
+
+	<other>
+		<STRUCTURE>
+			<myInt			dataType="int"	/>
+		</STRUCTURE>
+	</other>
+
+	<!--	################################################################	-->
+
+	<main>
+		<STRUCTURE>
+			<myList			dataType="list"		elementTypes="other"	/>
+		</STRUCTURE>
+	</main>
+
+	<!--	################################################################	-->
+
+</STRUCTURES>

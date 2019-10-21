@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<STRUCTURES>
+
+	<!--	################################################################	-->
+
+	<main>
+		<STRUCTURE>
+			<myInt			dataType="int"	/>
+			<myFloat		dataType="float"	/>
+			<myBool			dataType="bool"	/>
+			<myStr			dataType="str"	/>
+		</STRUCTURE>
+	</main>
+
+	<!--	################################################################	-->
+
+</STRUCTURES>

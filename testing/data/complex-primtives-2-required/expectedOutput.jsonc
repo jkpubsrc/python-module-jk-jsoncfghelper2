@@ -1,0 +1,6 @@
+[
+	[	"myBool",	"required"	],
+	[	"myFloat",	"required"	],
+	[	"myInt",	"required"	],
+	[	"myStr",	"required"	],
+]
