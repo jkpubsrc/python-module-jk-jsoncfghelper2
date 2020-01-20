@@ -3,9 +3,10 @@
 	"name": "jk_jsoncfghelper2",
 	"version": "0.2019.10.29",
 	"meta": {
-		"description": "This python module ...",
+		"description": "This python module contains support classes for loading and verifying configuratios. It is currently in alpha state as it is not yet clear how complete the implementation and how stable the API is. This modul might still undergo quite some rework.",
 		"keywords": [
-			"..."
+			"configuration",
+			"json"
 		],
 		"license": "Apache 2.0",
 		"development_status": "alpha",
@@ -23,7 +24,7 @@
 		{
 			"type": "github",
 			"user": "jkpubsrc",
-			"project": "........",
+			"project": "python-module-jk-jsoncfghelper2",
 			"devon_publish": false
 		},
 		{
