@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<STRUCTURES>
+
+	<!--	################################################################	-->
+
+	<main>
+		<STRUCTURE>
+			<myBoolean			dataType="boolean"		required="false"		nullable="true"	/>
+		</STRUCTURE>
+	</main>
+
+	<!--	################################################################	-->
+
+</STRUCTURES>

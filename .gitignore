@@ -6,3 +6,5 @@ examples/__pycache__/
 .svn/
 .vscode
 examples/*.log
+testing/results/*
+

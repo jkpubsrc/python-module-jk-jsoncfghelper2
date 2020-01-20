@@ -7,6 +7,28 @@ from .value_checkers import *
 
 
 
+def __xml_getBooleanAttribute(x:HElement, attrName:str, defaultValue:bool) -> bool:
+	if x.hasAttribute(attrName):
+		s = x.getAttributeValue(attrName)
+		if (s == "true") or (s == "1") or (s == "yes"):
+			return True
+		elif (s == "false") or (s == "0") or (s == "no"):
+			return False
+		else:
+			raise Exception("Invalid value specified for " + repr(attrName) + ": " + repr(s))
+	else:
+		return defaultValue
+#
+
+
+
+
+def _compile_null(scmgr:StructureCheckerManager, x:HElement):
+	required = __xml_getBooleanAttribute(x, "required", True)
+
+	return NullValueChecker(scmgr, required=required, nullable=True)
+#
+
 
 
 def _compile_int(scmgr:StructureCheckerManager, x:HElement):
@@ -20,19 +42,13 @@ def _compile_int(scmgr:StructureCheckerManager, x:HElement):
 
 	allowedValues = None
 	if x.hasAttribute("allowedValues"):
-		allowedValues = [ int(i) for i in x.getAttributeValue("allowedValues").split(",") ]
+		allowedValues = [ int(i.strip()) for i in x.getAttributeValue("allowedValues").split(",") ]
 
-	required = True
-	if x.hasAttribute("required"):
-		s = x.getAttributeValue("required")
-		if (s == "true") or (s == "1") or (s == "yes"):
-			required = True
-		elif (s == "false") or (s == "0") or (s == "no"):
-			required = False
-		else:
-			raise Exception("Invalid value specified for 'required': " + repr(s))
+	required = __xml_getBooleanAttribute(x, "required", True)
 
-	return IntValueChecker(minValue=minValue, maxValue=maxValue, required=required)
+	nullable = __xml_getBooleanAttribute(x, "nullable", False)
+
+	return IntValueChecker(scmgr, minValue=minValue, maxValue=maxValue, required=required, nullable=nullable)
 #
 
 
@@ -48,35 +64,23 @@ def _compile_float(scmgr:StructureCheckerManager, x:HElement):
 
 	allowedValues = None
 	if x.hasAttribute("allowedValues"):
-		allowedValues = [ float(i) for i in x.getAttributeValue("allowedValues").split(",") ]
+		allowedValues = [ float(i.strip()) for i in x.getAttributeValue("allowedValues").split(",") ]
 
-	required = True
-	if x.hasAttribute("required"):
-		s = x.getAttributeValue("required")
-		if (s == "true") or (s == "1") or (s == "yes"):
-			required = True
-		elif (s == "false") or (s == "0") or (s == "no"):
-			required = False
-		else:
-			raise Exception("Invalid value specified for 'required': " + repr(s))
+	required = __xml_getBooleanAttribute(x, "required", True)
 
-	return FloatValueChecker(minValue=minValue, maxValue=maxValue, required=required)
+	nullable = __xml_getBooleanAttribute(x, "nullable", False)
+
+	return FloatValueChecker(scmgr, minValue=minValue, maxValue=maxValue, required=required, nullable=nullable)
 #
 
 
 
 def _compile_bool(scmgr:StructureCheckerManager, x:HElement):
-	required = True
-	if x.hasAttribute("required"):
-		s = x.getAttributeValue("required")
-		if (s == "true") or (s == "1") or (s == "yes"):
-			required = True
-		elif (s == "false") or (s == "0") or (s == "no"):
-			required = False
-		else:
-			raise Exception("Invalid value specified for 'required': " + repr(s))
+	required = __xml_getBooleanAttribute(x, "required", True)
 
-	return BooleanValueChecker(required=required)
+	nullable = __xml_getBooleanAttribute(x, "nullable", False)
+
+	return BooleanValueChecker(scmgr, required=required, nullable=nullable)
 #
 
 
@@ -92,19 +96,13 @@ def _compile_str(scmgr:StructureCheckerManager, x:HElement):
 
 	allowedValues = None
 	if x.hasAttribute("allowedValues"):
-		allowedValues = [ s for s in x.getAttributeValue("allowedValues").split(",") ]
+		allowedValues = [ s.strip() for s in x.getAttributeValue("allowedValues").split(",") ]
 
-	required = True
-	if x.hasAttribute("required"):
-		s = x.getAttributeValue("required")
-		if (s == "true") or (s == "1") or (s == "yes"):
-			required = True
-		elif (s == "false") or (s == "0") or (s == "no"):
-			required = False
-		else:
-			raise Exception("Invalid value specified for 'required': " + repr(s))
+	required = __xml_getBooleanAttribute(x, "required", True)
 
-	return StringValueChecker(minLength=minLength, maxLength=maxLength, allowedValues=allowedValues, required=required)
+	nullable = __xml_getBooleanAttribute(x, "nullable", False)
+
+	return StringValueChecker(scmgr, minLength=minLength, maxLength=maxLength, allowedValues=allowedValues, required=required, nullable=nullable)
 #
 
 
@@ -120,44 +118,45 @@ def _compile_list(scmgr:StructureCheckerManager, x:HElement):
 
 	allowedElementTypes = None
 	if x.hasAttribute("elementTypes"):
-		allowedElementTypes = [ s for s in x.getAttributeValue("elementTypes").split(",") ]
+		allowedElementTypes = [ s.strip() for s in x.getAttributeValue("elementTypes").split(",") ]
 
-	required = True
-	if x.hasAttribute("required"):
-		s = x.getAttributeValue("required")
-		if (s == "true") or (s == "1") or (s == "yes"):
-			required = True
-		elif (s == "false") or (s == "0") or (s == "no"):
-			required = False
-		else:
-			raise Exception("Invalid value specified for 'required': " + repr(s))
+	required = __xml_getBooleanAttribute(x, "required", True)
 
-	return ListValueChecker(minLength=minLength, maxLength=maxLength, allowedElementTypes=allowedElementTypes, required=required)
+	nullable = __xml_getBooleanAttribute(x, "nullable", False)
+
+	return ListValueChecker(scmgr, minLength=minLength, maxLength=maxLength, allowedElementTypes=allowedElementTypes, required=required, nullable=nullable)
 #
 
 
 
-def _compile_dict(scmgr:StructureCheckerManager, t:AbstractValueChecker, x:HElement):
+def _compile_anydict(scmgr:StructureCheckerManager, x:HElement):
+	required = __xml_getBooleanAttribute(x, "required", True)
+
+	nullable = __xml_getBooleanAttribute(x, "nullable", False)
+
+	allowedElementTypes = None
+	if x.hasAttribute("elementTypes"):
+		allowedElementTypes = [ s.strip() for s in x.getAttributeValue("elementTypes").split(",") ]
+
+	return AnyDictionaryValueChecker(scmgr, required=required, allowedElementTypes=allowedElementTypes, nullable=nullable)
+#
+
+
+
+def _compile_specificdict(scmgr:StructureCheckerManager, t:AbstractValueChecker, x:HElement):
 	t = t.cloneObject()
 
-	t.required = True
-	if x.hasAttribute("required"):
-		s = x.getAttributeValue("required")
-		if (s == "true") or (s == "1") or (s == "yes"):
-			t.required = True
-		elif (s == "false") or (s == "0") or (s == "no"):
-			t.required = False
-		else:
-			raise Exception("Invalid value specified for 'required': " + repr(s))
+	t.required = __xml_getBooleanAttribute(x, "required", True)
+	t.nullable = __xml_getBooleanAttribute(x, "nullable", False)
 
 	return t
 #
 
 
 
-def _compile_eq(structureName:str, checker:DictionaryValueChecker, x:HElement):
+def _compile_eq(structureName:str, checker:SpecificDictionaryValueChecker, x:HElement):
 	fieldName = x.getAttributeValue("field")
-	sFieldValue = x.getAllText()
+	sFieldValue = x.getAllText().strip()
 
 	if fieldName in checker.children:
 		field = checker.children[fieldName]
@@ -187,7 +186,9 @@ def _compileDef(scmgr:StructureCheckerManager, x:HElement):
 
 		#print("\t> field ", repr(name), ":", dataType)
 
-		if dataType in [ "int", "integer" ]:
+		if dataType in [ "null" ]:
+			children[name] = _compile_null(scmgr, xChild)
+		elif dataType in [ "int", "integer" ]:
 			children[name] = _compile_int(scmgr, xChild)
 		elif dataType == "float":
 			children[name] = _compile_float(scmgr, xChild)
@@ -197,21 +198,23 @@ def _compileDef(scmgr:StructureCheckerManager, x:HElement):
 			children[name] = _compile_str(scmgr, xChild)
 		elif dataType in [ "list" ]:
 			children[name] = _compile_list(scmgr, xChild)
+		elif dataType in [ "dict", "dictionary", "obj", "object" ]:
+			children[name] = _compile_anydict(scmgr, xChild)
 		else:
 			t = scmgr.get(dataType)
 			if t is None:
 				raise Exception("Unknown data type: " + repr(dataType))
 			else:
-				children[name] = _compile_dict(scmgr, t, xChild)
+				children[name] = _compile_specificdict(scmgr, t, xChild)
 
-	checker = DictionaryValueChecker(children, structType=x.name)
+	checker = SpecificDictionaryValueChecker(scmgr, children, structType=x.name)
 
 	if xCondition is not None:
 		conditions = []
 		for xChild in xCondition.children:
 			if not isinstance(xChild, HElement):
 				continue
-			
+
 			name = xChild.name
 			#print("\t> condition ", repr(name))
 
@@ -235,7 +238,11 @@ def loadFromXMLFile(filePath:str, scmgr:StructureCheckerManager = None) -> Struc
 	if scmgr is None:
 		scmgr = StructureCheckerManager()
 
-	xRoot = _xmlParser.parseFile(filePath)
+	with open(filePath, "r") as f:
+		rawText = f.read()
+	rawText = rawText.strip()
+	xRoot = _xmlParser.parseText(rawText)
+	#xRoot = _xmlParser.parseFile(filePath)
 	assert isinstance(xRoot, HElement)
 
 	for x in xRoot.children:
@@ -252,6 +259,7 @@ def loadFromXMLStr(rawText:str, scmgr:StructureCheckerManager = None) -> Structu
 	if scmgr is None:
 		scmgr = StructureCheckerManager()
 
+	rawText = rawText.strip()
 	xRoot = _xmlParser.parseText(rawText)
 	assert isinstance(xRoot, HElement)
 
