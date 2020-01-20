@@ -25,11 +25,12 @@
 			"type": "github",
 			"user": "jkpubsrc",
 			"project": "python-module-jk-jsoncfghelper2",
-			"devon_publish": false
+			"devon_publish": true
 		},
 		{
 			"type": "pypy",
-			"devon_publish": false
+			"project": "jk-jsoncfghelper2",
+			"devon_publish": true
 		}
 	],
 	"source": {
