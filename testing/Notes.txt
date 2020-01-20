@@ -1,0 +1,33 @@
+required-not-required
+
+	identifier	required		nullable			data			expected behavior
+
+	111			false			false				present			success
+	112			false			false				n/a				success
+	113			false			false				null			error: must not be null
+	121			false			true				present			success
+	122			false			true				n/a				success
+	123			false			true				null			success
+	211			true			false				present			success
+	212			true			false				n/a				error: data required
+	213			true			false				null			error: must not be null
+	221			true			true				present			success
+	222			true			true				n/a				error: data required
+	223			true			true				null			success
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
