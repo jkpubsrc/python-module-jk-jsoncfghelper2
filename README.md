@@ -7,8 +7,8 @@ Introduction
 This python module contains support classes for loading and verifying configuratios. It is currently in alpha state as it is not yet clear how complete the implementation and how stable the API is. This modul might still undergo quite some rework.
 Information about this module can be found here:
 
-* [github.org](https://github.com/jkpubsrc/python-module-jk-jsoncfghelper2)
-* [pypi.python.org](https://pypi.python.org/pypi/jk_jsoncfghelper2)
+* [github.com](https://github.com/jkpubsrc/python-module-jk-jsoncfghelper2)
+* [pypi.org](https://pypi.org/project/jk-jsoncfghelper2/)
 
 Why this module?
 ----------------
